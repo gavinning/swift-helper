@@ -7,20 +7,20 @@ import XCTest
 
 final class EncodableTests: XCTestCase {
 
-    struct Person: Encodable {
-        var name: String
-        var age: Int
-    }
+  struct Person: Encodable {
+    var name: String
+    var age: Int
+  }
 
-    struct User: Decodable {
-        var name: String
-        var age: Int
-    }
+  struct User: Decodable {
+    var name: String
+    var age: Int
+  }
 
-    func testDecode() throws {
-        let tom = Person(name: "tom", age: 21)
-        let user = try tom.decode(User.self)
-        XCTAssertEqual(user.name, tom.name)
-        XCTAssertEqual(user.age, tom.age)
-    }
+  func testDecode() throws {
+    let tom = Person(name: "tom", age: 21)
+    let user = try tom.decode(User.self)
+    XCTAssertEqual(user.name, tom.name)
+    XCTAssertEqual(user.age, tom.age)
+  }
 }

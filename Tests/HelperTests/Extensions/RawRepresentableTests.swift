@@ -7,13 +7,13 @@ import XCTest
 
 final class RawRepresentableTests: XCTestCase {
 
-    enum Theme: String {
-        case light
-        case night
-    }
+  enum Theme: String {
+    case light
+    case night
+  }
 
-    func testIs() throws {
-        XCTAssertTrue(Theme.light.is("light"))
-        XCTAssertFalse(Theme.light.is("night"))
-    }
+  func testIs() throws {
+    XCTAssertTrue(Theme.light.is("light"))
+    XCTAssertFalse(Theme.light.is("night"))
+  }
 }
